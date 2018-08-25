@@ -1,0 +1,27 @@
+{ "name": "pimatic-obi-power-outlet",
+  "description": "Plugin to control the OBI power outlet",
+  "author": "Sebastian Hammerl <github@omoco.de> (https://omoco.de)",
+  "main": "obi-power-outlet",
+  "files": [
+    "obi-power-outlet.coffee",
+    "README.md",
+    "obi-power-outlet-config-schema.coffee"
+  ],
+  "version": "0.1.0",
+  "homepage": "https://github.com/sebastianha/pimatic-obi-power-outlet",
+  "private": true,
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/sebastianha/pimatic-obi-power-outlet.git"
+  },
+  "configSchema": "obi-power-outlet-config-schema.coffee",
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "pimatic": "0.8.*"
+  },
+  "engines": {
+    "node": ">0.8.x",
+    "npm": ">1.1.x"
+  }
+}
