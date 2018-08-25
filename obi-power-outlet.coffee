@@ -41,7 +41,9 @@ module.exports = (env) ->
           if @_state is state then return Promise.resolve()
           action = "off"
           if state then action = "on"
-          child_process.exec("curl -m 3 -s http://" + @ipAddress + "/" + action)
+          child_process.exec("curl -m 3 -s http://" + @ipAddress + "/" + action, ((err, stdout, stderr) ->
+            @_setState(stdout == "on\n")
+          ).bind(this))
           return Promise.resolve()
 
         getState: () ->
