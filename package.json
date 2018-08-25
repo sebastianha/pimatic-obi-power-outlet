@@ -21,7 +21,7 @@
   "dependencies": {
   },
   "peerDependencies": {
-    "pimatic": "0.8.*"
+    "pimatic": ">0.8.x"
   },
   "engines": {
     "node": ">0.8.x",
