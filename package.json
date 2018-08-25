@@ -4,8 +4,11 @@
   "main": "obi-power-outlet",
   "files": [
     "obi-power-outlet.coffee",
+    "obi-power-outlet-config-schema.coffee",
+    "obi-power-outlet.ino",
+    "device-config-schema.coffee",
     "README.md",
-    "obi-power-outlet-config-schema.coffee"
+    "LICENSE"
   ],
   "version": "0.1.0",
   "homepage": "https://github.com/sebastianha/pimatic-obi-power-outlet",
