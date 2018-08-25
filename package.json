@@ -12,7 +12,7 @@
   ],
   "version": "0.1.0",
   "homepage": "https://github.com/sebastianha/pimatic-obi-power-outlet",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "https",
     "url": "https://github.com/sebastianha/pimatic-obi-power-outlet.git"
