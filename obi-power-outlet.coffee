@@ -33,7 +33,7 @@ module.exports = (env) ->
               @_setState(stdout == "on\n")
             ).bind(this))
           updateState.bind(this)()
-          setInterval updateState.bind(this), statusQueryInterval
+          @statusInterval = setInterval updateState.bind(this), statusQueryInterval
 
           super()
 
@@ -48,6 +48,10 @@ module.exports = (env) ->
 
         getState: () ->
           return @_state
+
+        destroy: () ->
+          clearInterval(@statusInterval) if(@statusInterval)
+          super()
 
   obiPowerOutlet = new ObiPowerOutlet
   return obiPowerOutlet
