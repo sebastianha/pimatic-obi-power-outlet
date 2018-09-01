@@ -19,9 +19,12 @@ module.exports = (env) ->
             description: "turns the switch on"
           turnOff:
             description: "turns the switch off"
+          toggle:
+            description: "toggles the state of the switch"
 
         turnOn: -> @changeStateTo true
         turnOff: -> @changeStateTo false
+        toggle: -> @toggle
 
         constructor: (@config) ->
           @name = @config.name
@@ -45,6 +48,9 @@ module.exports = (env) ->
             @_setState(stdout == "on\n")
           ).bind(this))
           return Promise.resolve()
+
+        toggle: () ->
+          if @_state then @changeStateTo false else @changeStateTo true
 
         getState: () ->
           return @_state
